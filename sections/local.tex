@@ -1,0 +1,62 @@
+\section{Deleting two primes}\label{sec:local}
+The eight reduced residue classes modulo $24$ are
+$1,5,7,11,13,17,19,23$. Plichta's prime cross draws these classes
+as spokes of a wheel. Grant and Ghannam use the same picture
+\cite{plichta,grant}. A prime greater than $3$ lies on one of these
+spokes, as does a composite such as $91$. For the von Mangoldt function
+$\Lambda$, which takes the value $\log p$ on $p^k$, $k\geq1$, and is
+zero elsewhere, restricting to these eight classes has a precise effect.
+It removes only the powers of $2$ and $3$.
+
+We consider a weight used by Alpöge \cite[p.~3, item 5]{alpoge}.
+For $x\geq1$ real and $m\geq1$ an integer, define
+\begin{align}
+ S_m(x)&=\sum_{\substack{n\leq x\\(n,m)=1}}\Lambda(n)(x/n-1),
+ &c_m&=\sum_{p\mid m}\frac{\log p}{p-1},\notag\\
+ E_m(x)&=S_m(x)-x\log x+(1+\gamma+c_m)x. \label{eq:normalization}
+\end{align}
+Here $\gamma$ is Euler's constant. Write $E=E_1$, $\ell_p=\log p$
+and $a_p=\ell_p/(p-1)$. For $0\leq v\leq1$ define
+\[
+ f_p(v)=a_p e^{\ell_p v}-\ell_p v.
+\]
+Since $f_p(0)=f_p(1)=a_p$, this gives a continuous function on the
+circle $\T=\RR/\mathbb Z$. All measures on tori below are normalized
+Lebesgue measures. We use natural logarithms throughout.
+
+\begin{prop}[Exact correction]\label{prop:local}
+For every $m\geq1$ and $x\geq1$,
+\begin{equation}
+ E_m(x)=E(x)+\omega(m)\log x+
+ \sum_{p\mid m}f_p\!\left(\frac{\log x}{\ell_p}\right),
+ \label{eq:correction}
+\end{equation}
+where $\omega(m)$ is the number of distinct prime divisors of $m$.
+\end{prop}
+\begin{proof}
+For a prime $p\mid m$ put $K=\lfloor\log x/\ell_p\rfloor$ and
+$u=x/p^K$. The contribution of its deleted powers to $S_1-S_m$ is
+\[
+ \ell_p\sum_{k=1}^K(xp^{-k}-1)
+ =a_p(x-u)-K\ell_p.
+\]
+The normalization restores $a_px$, and
+$K\ell_p=\log x-\log u$.
+The remaining term $a_pu-\log u$ is exactly
+$f_p(\log x/\ell_p)$. Distinct primes have disjoint sets of positive
+powers. At $x=p^K$ the last summand vanishes, so the formula includes
+every endpoint.
+\end{proof}
+
+For the rest of the distributional analysis fix distinct primes $p,q$.
+Set $\omega=(1/\ell_p,1/\ell_q)$,
+$F(v,w)=f_p(v)+f_q(w)$, and $R_{p,q}(x)=F(\omega\log x)$.
+Write $R_{24}=R_{2,3}$. Logarithmic oscillations in sums over geometric
+progressions are classical in Mellin analysis \cite{fgd}.
+The one-base distributional behavior of $(\log_b n)\bmod 1$ under
+integer sampling has been studied quantitatively by Xu and Berger
+\cite{xu,berger}.
+Here the two explicit local functions determine the support, both
+endpoint constants, and the image of the joint phase distribution.
+All distributional statements below are independent of hypotheses on
+zeros of $L$-functions.

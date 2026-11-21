@@ -1,0 +1,145 @@
+\section{A sharp criterion for the modulus 24}\label{sec:explicit}
+For the principal character $\chi_0$ modulo $24$,
+\[
+ L(s,\chi_0)=\zeta(s)(1-2^{-s})(1-3^{-s}).
+\]
+The two extra factors have no zeros in $\Re s>0$. In particular, the
+zeros in the critical strip and their multiplicities agree. The
+smoothed sum gives a quantitative form of this observation. Define
+\begin{equation}
+ J(x)=\sum_{j\geq1}\frac{x^{-2j}}{2j(2j+1)},\qquad
+ C=2+\gamma-\log(4\pi), \label{eq:J}
+\end{equation}
+and center the eight-spoke sum by
+\[
+ W_{24}(x)=E_{24}(x)-2\log x-R_{24}(x)-\log(2\pi)+J(x).
+\]
+\begin{theorem}\label{thm:rh}
+The following statements are equivalent.
+\begin{enumerate}
+\item Every nontrivial zero of $\zeta$ has real part $1/2$.
+\item $|W_{24}(x)|\leq C\sqrt{x}$ for every real $x\geq1$.
+\item For each $\varepsilon>0$,
+$E_{24}(x)=O_\varepsilon(x^{1/2+\varepsilon})$ as $x\to\infty$.
+\end{enumerate}
+The constant in statement 2 is forced by equality at $x=1$.
+\end{theorem}
+\begin{proof}
+The classical smoothed explicit formula in this normalization is
+\begin{equation}
+ E(x)=\log(2\pi)-J(x)+
+          \sum_\rho\frac{x^\rho}{\rho(1-\rho)}, \label{eq:explicit}
+\end{equation}
+with one term per nontrivial zero counted with multiplicity. To verify
+the constants, invert the Mellin kernel $1/[s(s-1)]$ on $\Re s=2$
+against $-(\zeta'/\zeta)(s)x^s$. The inverse kernel gives
+$(x/n-1)_+$, including the value zero at $x=n$. Absolute convergence
+permits termwise inversion. At $s=1$ the double pole contributes
+$x\log x-(1+\gamma)x$. At $s=0$ the residue is
+$\zeta'(0)/\zeta(0)=\log(2\pi)$, and the poles at $-2j$ contribute
+$-J(x)$. The nontrivial zeros give the sum in \eqref{eq:explicit}.
+
+For completeness, fix an integer $M\geq1$. The good-height estimate
+for $\zeta'/\zeta$ gives heights $T_k\to\infty$ for which it is
+$O_M(\log^2 T_k)$ uniformly on the horizontal segments from
+$-2M-1$ to $2$ at heights $\pm T_k$ \cite[Lemmas 4--5]{kedlaya}.
+On $\Re s=-2M-1$, the zeta functional equation and Stirling's formula
+bound the logarithmic derivative by $O(\log(2+M+|\Im s|))$,
+with an absolute implied constant. The odd real part keeps the
+trigonometric term bounded also at height zero. The kernel contributes
+$O(T_k^{-2})$ on the horizontal segments. The full integral on the
+left line is $O(x^{-2M-1}\log(M+2)/(M+1))$. Taking $k\to\infty$
+and then $M\to\infty$ proves \eqref{eq:explicit}.
+The classical count $N(T)=O(T\log T)$ gives absolute, locally uniform
+convergence of the nontrivial-zero sum for $x\geq1$.
+
+At $x=1$, $E(1)=1+\gamma$ and
+$J(1)=\sum_{j\geq1}((2j)^{-1}-(2j+1)^{-1})=1-\log2$.
+Hence
+\begin{equation}
+ \sum_\rho\frac1{\rho(1-\rho)}=C. \label{eq:C}
+\end{equation}
+This classical evaluation is also recorded by Burnol \cite[p.~3]{burnol}.
+Under statement 1, $\rho(1-\rho)=1/4+(\Im\rho)^2>0$ and
+$|x^\rho|=\sqrt x$. By Proposition~\ref{prop:local},
+$W_{24}$ is precisely the zero sum in \eqref{eq:explicit}. The
+triangle inequality and \eqref{eq:C} prove statement 2, with
+$W_{24}(1)=C$. Since $0\leq J(x)\leq J(1)$, the correction in
+\eqref{eq:correction} is $O(1+\log x)$, so 2 implies 3.
+
+Assume statement 3. Equation \eqref{eq:correction} transfers the same
+bound to $E(x)$. Its Mellin transform
+$H(s)=\int_1^\infty E(x)x^{-s-1}\dd x$ is then holomorphic on
+$\Re s>1/2$, by locally uniform convergence. On $\Re s>1$, direct
+integration gives
+\[
+ H(s)=-\frac{\zeta'(s)}{s(s-1)\zeta(s)}
+             -\frac{1}{(s-1)^2}+\frac{1+\gamma}{s-1}.
+\]
+This identity extends meromorphically to $\Re s>1/2$. A zero
+$\rho$ in the right half of the critical strip would give a pole
+of the first term with residue $-\operatorname{ord}_\rho(\zeta)/
+[\rho(\rho-1)]\ne0$. The other terms are regular there. Holomorphy
+rules out this zero, and the functional equation rules out its
+reflection in the left half of the strip. This proves statement 1.
+\end{proof}
+Thus an independent proof of RH by the prime-cross approach would
+require an estimate for $E_{24}(x)$ in statement 3, or equivalently
+the bound in statement 2. The bounded oscillation in
+Theorem~\ref{thm:log} identifies exactly what removing the two Euler
+factors contributes to that estimate.
+\begin{cor}[A criterion on the integers]\label{cor:limsup}
+With $C$ as in \eqref{eq:J},
+\[
+ \limsup_{n\to\infty}\frac{E_{24}(n)}{\sqrt n}=
+ \begin{cases}
+ C,&\text{if RH holds},\\
+ +\infty,&\text{if RH fails}.
+ \end{cases}
+\]
+In the second case the corresponding lower limit is $-\infty$.
+\end{cor}
+\begin{proof}
+The difference $E_{24}(x)-W_{24}(x)$ is $O(1+\log x)$.
+Under RH put $w_\rho=1/(1/4+(\Im\rho)^2)$. Equations
+\eqref{eq:explicit} and \eqref{eq:C} give
+\[
+ e^{-t/2}W_{24}(e^t)=\sum_\rho w_\rho e^{it\Im\rho},
+ \qquad \sum_\rho w_\rho=C.
+\]
+This is Nicolas's zero sum \cite[(1.18)--(1.19), Section~4]{nicolas},
+whose real-argument upper limit is $C$. The recurrence argument also
+applies to sampling at integers. For any finite set of ordinates and any tolerance, there are
+arbitrarily large integer times $t$ at which all their phases are
+within that tolerance of $1$. Indeed the phase vectors at positive
+integer times have a convergent subsequence in a compact torus.
+Differences of sufficiently far separated subsequence terms give the
+claimed returns. Truncate the series with tail smaller than a given
+$\delta>0$, and apply this argument to its finite part. Replacing
+$t$ by $\log\lfloor e^t\rfloor$ changes those finitely many phases
+by $o(1)$, while the absolute tail stays below $\delta$. This proves
+that the upper limit along integers is $C$.
+
+If RH fails, some zero has real part $\beta>1/2$. Suppose
+$E(x)\leq K\sqrt{x}$ eventually. The Mellin transform of the
+eventually nonnegative function $K\sqrt{x}-E(x)$ on $[1,\infty)$
+is $K/(s-1/2)-H(s)$, initially for $\Re s>1$. Its pole at that zero
+forces its abscissa of convergence $\sigma_c$ to satisfy
+$\beta\leq\sigma_c\leq1$. Landau's oscillation theorem forces a
+singularity at the real point $\sigma_c$ \cite[Theorem 3]{lay}.
+But the formula for $H(s)$ in the preceding proof is regular on
+the real interval $(1/2,\infty)$. At $1$ this follows by the
+Laurent expansion $\zeta(s)=(s-1)^{-1}+\gamma+O(s-1)$, and on
+$(1/2,1)$ it follows from the positive alternating eta series and
+$1-2^{1-s}\ne0$. This contradiction rules out every such upper
+bound. Applying the same argument to $K\sqrt{x}+E(x)$ rules out
+every lower bound of the opposite sign.
+
+To pass to integers, on $n<x<n+1$ the slope of $S_1$ is
+$\sum_{j\leq n}\Lambda(j)/j=O(\log^2(2n))$, using
+$\Lambda(j)\leq\log j$. The other terms of $E$ vary by
+$O(\log(2n))$ across the interval. Continuity at each endpoint
+gives $E(x)-E(\lfloor x\rfloor)=O(\log^2(2x))$. Together with
+\eqref{eq:correction} this transfers both unbounded oscillations to
+$E_{24}(n)/\sqrt n$.
+\end{proof}

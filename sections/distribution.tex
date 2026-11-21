@@ -1,0 +1,76 @@
+\section{The distribution under logarithmic averaging}\label{sec:distribution}
+Put $b_j=1+\log a_j$ for $j=p,q$,
+$B=b_p+b_q$, and $A=a_p+a_q$. Define the two positive constants
+\begin{equation}
+ h_j=\frac{1}{\ell_j}\left(\frac{1}{1-a_j}+
+                         \frac{1}{j a_j-1}\right),\qquad j=p,q .
+ \label{eq:h}
+\end{equation}
+\begin{theorem}\label{thm:log}
+Let $U,V$ be independent uniform variables on $\T$ and let
+$Z=f_p(U)+f_q(V)$. For every continuous $\varphi$ on $[B,A]$,
+\begin{equation}
+ \lim_{X\to\infty}\frac1{\log X}\int_1^X
+   \varphi(R_{p,q}(x))\frac{\mathrm dx}{x}
+   =\E\varphi(Z). \label{eq:loglaw}
+\end{equation}
+The support is $[B,A]$, the law is absolutely continuous, and
+$\E Z=2-\tfrac12\log(pq)$. Its tails satisfy, as $s\downarrow0$,
+\begin{equation}
+ \Prob(Z\leq B+s)\sim \frac{2\pi}{\ell_p\ell_q}s,\qquad
+ \Prob(Z\geq A-s)\sim \frac{h_p h_q}{2}s^2.
+ \label{eq:tails}
+\end{equation}
+Furthermore $\liminf_{x\to\infty}R_{p,q}(x)=B$ and
+$\limsup_{x\to\infty}R_{p,q}(x)=A$.
+\end{theorem}
+\begin{proof}
+Unique factorization gives $\ell_p/\ell_q\notin\mathbb Q$.
+Thus $k\cdot\omega\ne0$ for every nonzero $k\in\mathbb Z^2$.
+With $t=\log x$, the time average on $0\leq t\leq T$ of the character
+$e^{2\pi i (k\cdot\omega)t}$ tends to zero. Uniform trigonometric
+approximation of $\varphi\circ F$ proves \eqref{eq:loglaw}. This is
+the continuous-time character argument for equidistribution \cite{weyl}.
+
+For $j=p,q$ the inequalities $(j-1)/j<\ell_j<j-1$ give
+$a_j<1<j a_j$. The unique minimum of $f_j$ is $b_j$ at
+$v_j^*=-\log a_j/\ell_j$ and its maximum is $a_j$ at the joined
+endpoints. The map $F$ attains every value in $[B,A]$, and the inverse
+image of any relatively open subinterval has positive area. The same
+equidistribution argument then gives the stated extremal limits.
+Direct integration gives $\int_0^1 f_j(v)\dd v=1-\ell_j/2$.
+
+For $b_j<y<a_j$, the density of $f_j(U)$ is
+\begin{equation}
+ g_j(y)=\sum_{v\in(0,1):\, f_j(v)=y}
+               \frac{1}{\ell_j\,|a_j e^{\ell_j v}-1|}.
+ \label{eq:density}
+\end{equation}
+This follows by changing variables on the two strictly monotone
+branches. The critical point and the endpoints have zero measure.
+Independence gives the convolution $g_p*g_q$ for the density of $Z$.
+
+At the minimum, $f_j(v_j^*+w)=b_j+\ell_j^2w^2/2+O(w^3)$.
+Consequently $g_j(b_j+u)\sim\sqrt{2}/(\ell_j\sqrt{u})$. At the
+maximum the two one-sided derivatives are nonzero, giving
+$g_j(a_j-u)\to h_j$. For the lower tail, integrate the product of
+the two shifted densities over the triangle $u,v>0$, $u+v\leq s$.
+After rescaling by $s$, the singular factors have integral
+\[
+ \int_0^1\int_0^{1-u}(uv)^{-1/2}\dd v\dd u=\pi .
+\]
+The local asymptotics bound the rescaled integrand by a constant
+multiple of $(uv)^{-1/2}$. Dominated convergence yields the first
+constant in \eqref{eq:tails}. At the upper end the two densities are
+bounded and the triangle has area $s^2/2$, giving the second.
+\end{proof}
+
+For $m=24$ the endpoints and mean become
+\[
+ B=2+\log\!\left(\frac{\log 2\,\log 3}{2}\right),\qquad
+ A=\log 2+\tfrac12\log 3,\qquad \E Z=2-\tfrac12\log 6.
+\]
+Their values are approximately $1.034388$, $1.242453$ and $1.104120$.
+The square-root singularity of each local density at its minimum
+accounts for the linear lower tail. At the maximum both slopes of each
+local function are nonzero, producing the quadratic upper tail.

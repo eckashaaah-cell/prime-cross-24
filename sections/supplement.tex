@@ -1,0 +1,32 @@
+\section{An explicit auxiliary congruence}\label{sec:lean}
+One of the conditions on an auxiliary prime in Alpöge's source is a
+simultaneous congruence modulo $16$ and an odd integer $M$ \cite{source}.
+It has the following explicit representative.
+\begin{prop}\label{prop:crt}
+For positive odd $M$ and any nonnegative integer $d$,
+\[
+ d\equiv7\pmod {16},\quad M\mid d+1
+ \quad\Longleftrightarrow\quad d\equiv8M-1\pmod{16M}.
+\]
+Moreover $\gcd(8M-1,16M)=1$ for every positive integer $M$.
+\end{prop}
+\begin{proof}
+Write $d+1=Mk$. Since $M$ is odd it acts invertibly modulo $16$
+and fixes the residue $8$. Hence $Mk\equiv8\pmod{16}$ is
+equivalent to $k\equiv8\pmod{16}$. This yields the claimed class,
+and reversing the substitution proves the converse. Every common
+divisor of $8M-1$ and $16M$ divides $16M-2(8M-1)=2$, while $8M-1$
+is odd.
+\end{proof}
+For example $M=33$ gives $d\equiv263\pmod{528}$. With $M=3$ one
+obtains $d\equiv23\pmod{48}$, which selects every other integer on
+the $23$rd spoke. A prime $q>3$ with $q\equiv3\pmod8$ must lie on
+the $11$th or the $19$th spoke. These congruences prescribe candidate
+classes. An estimate for primes in a prescribed interval with varying
+$M$ requires additional analytic input.
+
+The accompanying Lean file proves the two spoke statements, the
+explicit congruence, coprimality, and existence of the residue class.
+Sections~\ref{sec:local}--\ref{sec:explicit} have mathematical proofs
+in the text. The proof and verification records of Alpöge and
+Sutherland concern the separate upstream project \cite{alpoge,sutherland}.

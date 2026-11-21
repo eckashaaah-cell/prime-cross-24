@@ -1,0 +1,40 @@
+{
+  "RH_constant": 0.04619141793224202,
+  "endpoint_coefficients": [
+    8.251063980582176,
+    14.445066472344383
+  ],
+  "exact_deletion": {
+    "coefficient_comparisons": 5361,
+    "distinct_rational_inputs": 1787
+  },
+  "max_aggregate_abs_error": 1.737276988933445e-12,
+  "sampling": {
+    "integer_cutoff": 60000,
+    "integer_mean": 1.1033570079558612,
+    "logarithmic_mean": 1.1041202653859725,
+    "phase_mean": 1.1033522745274762,
+    "torus_quadrature": 1.1041202646828885
+  },
+  "support": [
+    1.0343877264750894,
+    1.2424533248940002
+  ],
+  "tail_quadrature": [
+    {
+      "lower_ratio_to_asymptotic": 1.0000866815843774,
+      "s": 0.001,
+      "upper_ratio_to_asymptotic": 1.0038292835329672
+    },
+    {
+      "lower_ratio_to_asymptotic": 1.0000116790408708,
+      "s": 0.0001,
+      "upper_ratio_to_asymptotic": 1.0003809070589005
+    },
+    {
+      "lower_ratio_to_asymptotic": 1.0000041789886351,
+      "s": 1e-05,
+      "upper_ratio_to_asymptotic": 1.0000380706790952
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in,letterpaper]{geometry}
+\usepackage{amsmath,amssymb,amsthm,graphicx}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{xcolor}
+\usepackage{microtype}
+\hypersetup{pdftitle={Two Euler factors in a smoothed prime sum},pdfauthor={},pdfsubject={Exact local corrections, their limiting laws and a Riemann hypothesis criterion}}
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{cor}[theorem]{Corollary}
+\newcommand{\T}{\mathbb T}
+\newcommand{\Prob}{\mathbb P}
+\newcommand{\E}{\mathbb E}
+\newcommand{\dd}{\,\mathrm d}
+\DeclareMathOperator{\Law}{Law}
+\newcommand{\RR}{\mathbb R}
+\numberwithin{equation}{section}
+\title{\bfseries Two Euler factors in a smoothed prime sum}
+\author{}
+\date{\normalsize November 21, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Removing the powers of two distinct primes from the von Mangoldt sum
+with weight $(x/n-1)_+$ leaves a bounded oscillation after the linear
+and logarithmic terms are subtracted. We compute its distribution under
+logarithmic averaging. If $s$ is the distance from an endpoint of its
+support, the lower tail is asymptotic to a constant times $s$, whereas
+the upper tail is asymptotic to a constant times $s^2$. We determine
+both constants. Under uniform sampling of the integers there is a
+family of subsequential laws indexed by a two-dimensional torus.
+For the eight reduced classes modulo $24$ we use the classical explicit
+formula to express the Riemann hypothesis as a sharp uniform bound
+on the remaining prime sum. Along the integers its normalized upper
+limit is exactly $2+\gamma-\log(4\pi)$ under RH and infinite if RH fails.
+\end{abstract}
+\input{sections/local}
+\input{sections/distribution}
+\input{sections/sampling}
+\input{sections/explicit}
+\input{sections/supplement}
+\input{sections/references}
+\end{document}

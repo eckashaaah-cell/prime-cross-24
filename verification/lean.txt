@@ -1,0 +1,10 @@
+Lean (version 4.33.1, x86_64-w64-windows-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+Checking PrimeCross24.lean
+'PrimeCross24.q_spokes' depends on axioms: [propext, Quot.sound]
+'PrimeCross24.d_spoke' depends on axioms: [propext, Classical.choice, Quot.sound]
+'PrimeCross24.auxiliary_congruence' depends on axioms: [propext, Quot.sound]
+'PrimeCross24.auxiliary_coprime' depends on axioms: [propext, Quot.sound]
+'PrimeCross24.exists_coprime_class' depends on axioms: [propext, Quot.sound]
+Checking OriginalSignature.lean
+'_private.OriginalSignature.0.QH.chineseRemainder_finiteCover' depends on axioms: [propext, Quot.sound]
+Both local modules compiled.
